@@ -1,28 +1,31 @@
 
 public class Point 
 {
-	private double x,y;
+	private char nom;
+	private double abcisse;
 	
-	//Initialiser les axes
-	public void Init()
+	
+	//Constructeur
+	
+	public Point(char name, double abcisse)
 	{
-		this.x=0;
-		this.y=0;
+		this.nom=name;
+		this.abcisse=abcisse;
+	}
+	public void Afficher()
+	{
+		System.out.println("Nom : "+this.nom);
+		System.out.println("Abcisse : "+abcisse);
 	}
 	
 	//deplacer les axes
-	public void Deplacer(double abs, double ord)
+	public void Translate(double abci)
 	{
-		this.x=abs;
-		this.y=ord;
+		this.abcisse=abci;
+		
 	}
 	
-	//Afficher les axes
-	public void Afficher()
-	{
-		System.out.println(x);
-		System.out.println(y);
-	}
+	
 	
 	
 }
